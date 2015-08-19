@@ -1,5 +1,6 @@
 package com.mycuteblog.hibernate4.controller.impl;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,12 +73,12 @@ public class UserControllerImpl {
 	}
 	
 	//得到request,response,session等,只要在方法形参中声明参数即可  
-//    @RequestMapping(value = "/hello3")  
-//    public String hello3(){  
-//        String id = request.getParameter("id");  
-//        System.out.println("hello3 action:"+id);  
-//        return "hello";  
-//    }  
+    @RequestMapping(value = "/hello3")  
+    public String hello3(HttpServletRequest request){  
+        String id = request.getParameter("id");  
+        System.out.println("hello3 action:"+id);  
+        return "hello";  
+    }  
 
 	public boolean updateUser(User user) {
 		return userDao.updateUser(user);
