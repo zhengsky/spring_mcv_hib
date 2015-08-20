@@ -8,10 +8,11 @@
 <body>
     <body>
     
-<form action="add" method="post">  
+<form action="add" method="post" enctype="multipart/form-data">  
 <input name="firstName"/>  
 <input name="lastName"/>  
 <input name="age"/>  
+Attach:<input type="file" name="attach"/>
 <input type="submit" value="确认">  
 </form>  
 </body>
